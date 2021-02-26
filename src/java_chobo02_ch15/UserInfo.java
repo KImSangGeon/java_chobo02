@@ -8,6 +8,7 @@ public class UserInfo implements Serializable {
 	String name;
 	String password;
 	private int age;
+	
 	public UserInfo(String name, String password, int age) {
 		this.name = name;
 		this.password = password;
