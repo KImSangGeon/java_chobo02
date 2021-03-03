@@ -33,8 +33,7 @@ public class JoinFunctionEx {
 		Function<String, Integer> k = i -> Integer.parseInt(i, 16);
 		System.out.println(k.apply("10"));
 		Function<Integer, Integer> l = k.compose(j);   // j+k -> l;
-		System.out.println(l.apply(10));
-		
+		System.out.println(l.apply(10));   //10 -> 1010 (2진수) -> l * 16^3 + l*16 = 4096 +16 =4112 ;		
 
 	}
 
