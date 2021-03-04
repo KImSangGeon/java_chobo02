@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -58,7 +57,8 @@ public class StreamEx {
 		System.out.println();
 		intStream = new Random().ints(1, 46);
 		intStream.distinct().limit(6).sorted().forEach(i -> System.out.print(i + ", "));
-		System.out.println();
+		System.out.println(
+				);
 		
 		Stream<String> strStream = Stream.of("dd", "aaa", "CC", "cc" ,"b");
 		int sum = strStream.parallel().mapToInt(s -> s.length()).sum();
