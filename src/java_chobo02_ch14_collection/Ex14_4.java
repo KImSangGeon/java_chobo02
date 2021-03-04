@@ -33,7 +33,7 @@ public class Ex14_4 {
 			System.out.printf("{ %s -> %s}%n", e.getKey(), e.getValue());
 		}
 
-		System.out.println("Map<key, value > 출력1");
+		System.out.println("Map<key, value > 출력2");
 		for (String key : map.keySet()) {
 			System.out.printf("{ %s -> %s}%n", key, map.get(key));
 		}

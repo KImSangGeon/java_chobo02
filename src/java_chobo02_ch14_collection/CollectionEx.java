@@ -27,7 +27,7 @@ public class CollectionEx {
 		Consumer<Integer> d = i -> System.out.print(i + " ");
 		arList.forEach(c);
 		System.out.println();
-		
+	
 		arList.forEach(d);
 		System.out.println();
 		
@@ -37,11 +37,11 @@ public class CollectionEx {
 		//List에서 2또는 3의 배수를 제거
 		arList.removeIf(x -> x % 2 == 0 || x % 3 ==0);
 		arList.forEach(i ->System.out.print(i + " "));
-		
+
 		Predicate<Integer> p1 = i -> i % 2 ==0;
 		Predicate<Integer> p2 = i -> i % 3 ==0;
 		Predicate<Integer> p3 = p1.or(p2);
-		
+	
 		
 		ArrayList<Integer> arList2 = new ArrayList<Integer>();
 		for(int i=0; i<10; i++) {
@@ -50,14 +50,14 @@ public class CollectionEx {
 		System.out.println();
 		arList2.forEach(i->System.out.print(i+ " "));
 		System.out.println();
-		
+	
 		arList2.removeIf(p3);
 		arList2.forEach(i->System.out.print(i + " "));
 		System.out.println();
 		
 		UnaryOperator<Integer> v = new UnaryOperator<Integer>() {
 
-			@Override
+		@Override
 			public Integer apply(Integer t) {
 				return t * 10;
 			}
@@ -65,13 +65,11 @@ public class CollectionEx {
 		arList.replaceAll(v);
 		arList.forEach(i->System.out.print(i + " "));
 		System.out.println();
-	
+
 		UnaryOperator<Integer> u = i -> i * 10;
 		arList2.replaceAll(u);
 		arList2.forEach(i->System.out.print(i + " "));
-		
-	
-		
+
 		
 	}
 

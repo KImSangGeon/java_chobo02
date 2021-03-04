@@ -20,18 +20,21 @@ public class JoinFunctionEx {
 		Function<String, Integer> f =  s -> Integer.parseInt(s, 16);
 		System.out.println(f.apply("AE"));
 		
+		System.out.println("!@!@!@ 2진수");
 		Function<Integer, String> g  = i -> Integer.toBinaryString(i);
 		System.out.println(g.apply(174));
 		
+		System.out.println("!@W#!#!");
 		// andthen
 		Function<String, String> h = f.andThen(g);
 		System.out.println(h.apply("AE"));
 		
-		Function<Integer, String> j = i -> Integer.toBinaryString(i);
-		
+		Function<Integer, String> j = i -> Integer.toBinaryString(i);		
 		System.out.println(j.apply(10)); //10 -> 1010;
+		
 		Function<String, Integer> k = i -> Integer.parseInt(i, 16);
 		System.out.println(k.apply("10"));
+		
 		Function<Integer, Integer> l = k.compose(j);   // j+k -> l;
 		System.out.println(l.apply(10));   //10 -> 1010 (2진수) -> l * 16^3 + l*16 = 4096 +16 =4112 ;		
 
