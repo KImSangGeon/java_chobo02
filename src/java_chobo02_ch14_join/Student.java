@@ -26,6 +26,14 @@ public class Student implements Comparable<Student> {
 	}
 
 
+	public int getTotalScore() {
+		return totalScore;
+	}
+
+	public void setTotalScore(int totalScore) {
+		this.totalScore = totalScore;
+	}
+
 	@Override
 	public int compareTo(Student o) {
 		// TODO Auto-generated method stub

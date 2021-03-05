@@ -6,13 +6,13 @@ import java.util.function.Predicate;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class MidStreamEx {
+public class MidStreamEx { 
 	
 	public static void main(String[] args) {
 //		extract01(); //skip(),limit(),filter(),distict()
 		
 //		extracte02(); //sorted()
-	extract03();
+//	extract03();
 		
 		
 		
@@ -99,7 +99,7 @@ public class MidStreamEx {
 		// 2. filter(), distict()
 		IntStream.of(1, 2, 2, 3, 3, 3, 4, 5, 5, 5)
 		.distinct().forEach(s -> System.out.print(s + " "));
-		System.out.println();
+		System.out.println("=======");
 		
 		IntStream.rangeClosed(1, 20)
 		.filter(i -> i%2 == 0)

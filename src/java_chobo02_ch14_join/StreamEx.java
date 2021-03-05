@@ -43,13 +43,12 @@ public class StreamEx {
 		// 2. 스트림은 Iterator처럼 일회용이다.(필요하면 다시 스트림을 생성해야 함)
 		// 위 코드에서 strStream1.sorted().forEach(Sysyem.out::println);
 		// 사용했으므로 불가능
-		/*
-		 * long cnt = strStream1.count(); System.out.println(cnt);
-		 */
-		long cnt = Arrays.stream(strArr2).count();
-		System.out.println(cnt);
 
-		// 지연된 연산 (최종 연산전 까지는 중간연산이 수행되지 않음).
+		//long cnt = strStream1.count();
+		//System.out.println(cnt);
+		System.out.println("=============");
+		long cnt = Arrays.stream(strArr2).count(); //
+		System.out.println(cnt); // // // 지연된 연산(최종 연산전 까지는 중간연산이 수행되지 않음).
 		IntStream intStream = new Random().ints(1, 46);
 		intStream.distinct().limit(6).sorted() // 중간연산
 				.forEach(i -> System.out.print(i + ", "));// 최종연산
@@ -57,9 +56,8 @@ public class StreamEx {
 		System.out.println();
 		intStream = new Random().ints(1, 46);
 		intStream.distinct().limit(6).sorted().forEach(i -> System.out.print(i + ", "));
-		System.out.println(
-				);
-		
+		System.out.println();
+	
 		Stream<String> strStream = Stream.of("dd", "aaa", "CC", "cc" ,"b");
 		int sum = strStream.parallel().mapToInt(s -> s.length()).sum();
 		System.out.println("sum " + sum);
